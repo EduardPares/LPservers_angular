@@ -1,0 +1,24 @@
+<div class="pantalla">
+    <div class="pelis" >
+      Pelicules
+      <br>
+      <br>
+      <div class="col" *ngFor="let p of pelis" >
+        Titol de la pelicula:
+        <a [routerLink]="['/peliculesdetall/'+p.id]" class="text-dark">{{p.titolpelicula}}</a>
+        <br>
+        <a  class="text-dark"> Director: {{p.director}}</a>
+        <br>
+        <br>
+        <img [src]="p.imatge">
+        <br>
+        <br>
+        <a  class="text-dark"> Valoracio: {{p.valoracio}}</a>
+        <button type="button" class="btn btn-dark">+</button>
+        <button type="button" class="btn btn-dark">-</button>
+        <br>
+        <br>
+        
+       
+    </div>
+    </div>
