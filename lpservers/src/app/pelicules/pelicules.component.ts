@@ -7,12 +7,13 @@ import { DadesService } from '../dades.service';
   styleUrls: ['./pelicules.component.css']
 })
 export class PeliculesComponent implements OnInit {
-  pelis:any = "";
+  pacients:any = "";
   constructor(public serveiDades: DadesService) { }
 
   ngOnInit(): void {
-    this.serveiDades.llegirPelis().subscribe(resultat=>{
-      this.pelis=resultat;
+    this.serveiDades.llegirpacients().subscribe(resultat=>{
+      this.pacients=resultat.Items;
+      
   })
 
   }

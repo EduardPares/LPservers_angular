@@ -1,14 +1,15 @@
 <div class="pantalla">
-    <div class="pelis" >
-      Pelicules
+    <div class="pacients" >
+      Pacients
       <br>
       <br>
-      <div class="col" *ngFor="let p of pelis" >
-        Titol de la pelicula:
-        <a [routerLink]="['/peliculesdetall/'+p.id]" class="text-dark">{{p.titolpelicula}}</a>
+      <div class="col" *ngFor="let p of pacients" >
+        Nom Pacient:
+        <!-- <a [routerLink]="['/peliculesdetall/'+p.id]" class="text-dark">{{p.titolpelicula}}</a> -->
+        <a >{{p.info.nom}}</a>
         <br>
-        <a  class="text-dark"> Director: {{p.director}}</a>
-        <br>
+        <!-- <a  class="text-dark"> Director: {{p.director}}</a> -->
+        <!-- <br>
         <br>
         <img [src]="p.imatge">
         <br>
@@ -17,8 +18,8 @@
         <button type="button" class="btn btn-dark">+</button>
         <button type="button" class="btn btn-dark">-</button>
         <br>
-        <br>
-        
+        <br>  
+         -->
        
     </div>
     </div>

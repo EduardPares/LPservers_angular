@@ -7,17 +7,12 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class DadesService {
-  urlServidor = "https://www.firaempresa.cat/apipelis"
+  urlServidor = "https://df668zl2u6.execute-api.eu-west-1.amazonaws.com/UAT/dades"
   constructor(private http: HttpClient) { }
 
-  llegirPelis(){
+  llegirpacients(){
     return this.http.get<any>(
-      this.urlServidor + '/pelicules'
+      this.urlServidor
     )
     }
-    llegirActors(id:any){
-      return this.http.get<any>(
-        this.urlServidor + '/actors/' + id
-      )
-      }
 }
