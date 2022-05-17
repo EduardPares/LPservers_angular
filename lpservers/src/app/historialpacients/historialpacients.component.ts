@@ -10,14 +10,14 @@ import { DadesService } from '../dades.service';
 export class HistorialpacientsComponent implements OnInit {
 
   historial:any = "";
-  id:any = "";
+  idpacient:any = "";
   constructor(public route: ActivatedRoute, public serveiDades: DadesService) { }
   
 
  
   ngOnInit(): void {
-    this.id = this.route.snapshot.paramMap.get("idpacient");
-    this.serveiDades.llegirhistorial(this.id).subscribe(resultat=>{
+    this.idpacient = this.route.snapshot.paramMap.get("idpacient");
+    this.serveiDades.llegirhistorial(this.idpacient).subscribe(resultat=>{
       this.historial=resultat.Items;
   })
 
