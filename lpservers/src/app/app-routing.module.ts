@@ -6,7 +6,7 @@ import { HistorialpacientsComponent } from './historialpacients/historialpacient
 
 const routes: Routes = [
   { path: 'pacients', component: PacientsComponent},
-  { path: 'historialpacients#:idpacient', component: HistorialpacientsComponent},
+  { path: 'historialpacients/:idpacient', component: HistorialpacientsComponent},
   { path: '**', redirectTo:'/pacients'},
  
 ];
