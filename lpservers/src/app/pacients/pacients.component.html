@@ -6,7 +6,7 @@
       <div class="col" *ngFor="let p of pacients" >
         Nom Pacient:
         <!-- <a [routerLink]="['/peliculesdetall/'+p.id]" class="text-dark">{{p.titolpelicula}}</a> -->
-        <a >{{p.info.nom}}</a>
+        <a [routerLink]="['/historialpacients/'+p.info.idpacient]">{{p.info.nom}}</a>
         <br>
         <!-- <a  class="text-dark"> Director: {{p.director}}</a> -->
         <!-- <br>

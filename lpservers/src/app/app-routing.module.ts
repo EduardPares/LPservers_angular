@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PeliculesComponent } from './pelicules/pelicules.component';
+import { PacientsComponent } from './pacients/pacients.component';
+import { HistorialpacientsComponent } from './historialpacients/historialpacients.component';
 
 
 const routes: Routes = [
-  { path: '', pathMatch:'full',redirectTo: '/pelicules'},
-  { path: 'pelicules', component: PeliculesComponent},
-  { path: '**', redirectTo:'/pelicules'},
+  { path: 'pacients', component: PacientsComponent},
+  { path: 'historialpacients/:idpacient', component: HistorialpacientsComponent},
+  { path: '**', redirectTo:'/pacients'},
  
 ];
 

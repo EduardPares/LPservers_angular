@@ -3,10 +3,10 @@ import { DadesService } from '../dades.service';
 
 @Component({
   selector: 'app-pelicules',
-  templateUrl: './pelicules.component.html',
-  styleUrls: ['./pelicules.component.css']
+  templateUrl: './pacients.component.html',
+  styleUrls: ['./pacients.component.css']
 })
-export class PeliculesComponent implements OnInit {
+export class PacientsComponent implements OnInit {
   pacients:any = "";
   constructor(public serveiDades: DadesService) { }
 

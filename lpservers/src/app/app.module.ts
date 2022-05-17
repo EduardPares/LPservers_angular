@@ -3,13 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PeliculesComponent } from './pelicules/pelicules.component';
+import { PacientsComponent } from './pacients/pacients.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HistorialpacientsComponent } from './historialpacients/historialpacients.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PeliculesComponent
+    PacientsComponent,
+    HistorialpacientsComponent
   ],
   imports: [
     BrowserModule,
