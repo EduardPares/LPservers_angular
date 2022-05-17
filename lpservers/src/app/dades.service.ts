@@ -12,7 +12,7 @@ export class DadesService {
 
   llegirpacients(){
     return this.http.get<any>(
-      this.urlServidor + '/pacients'
+      this.urlServidor + '/pacients' 
     )
     }
 
