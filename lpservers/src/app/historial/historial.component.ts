@@ -3,11 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { DadesService } from '../dades.service';
 
 @Component({
-  selector: 'app-historialpacients',
-  templateUrl: './historialpacients.component.html',
-  styleUrls: ['./historialpacients.component.css']
+  selector: 'app-historial',
+  templateUrl: './historial.component.html',
+  styleUrls: ['./historial.component.css']
 })
-export class HistorialpacientsComponent implements OnInit {
+export class HistorialComponent implements OnInit {
 
   historial:any = "";
   idpacient:any = "";

@@ -5,13 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PacientsComponent } from './pacients/pacients.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HistorialpacientsComponent } from './historialpacients/historialpacients.component';
+import { HistorialComponent } from './historial/historial.component';
+import { PrincipalComponent } from './principal/principal.component';
+import { DiagnosticsComponent } from './diagnostics/diagnostics.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PacientsComponent,
-    HistorialpacientsComponent
+    HistorialComponent,
+    PrincipalComponent,
+    DiagnosticsComponent
   ],
   imports: [
     BrowserModule,
