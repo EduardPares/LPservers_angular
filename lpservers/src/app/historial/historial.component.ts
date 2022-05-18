@@ -12,13 +12,13 @@ export class HistorialComponent implements OnInit {
   historial:any = "";
   idpacient:any = "";
   constructor(public route: ActivatedRoute, public serveiDades: DadesService) { }
-  
+
 
  
   ngOnInit(): void {
     this.idpacient = this.route.snapshot.paramMap.get("idpacient");
     this.serveiDades.llegirhistorial(this.idpacient).subscribe(resultat=>{
-      this.historial=resultat.Items;
+      this.historial=resultat;
   })
 
 }

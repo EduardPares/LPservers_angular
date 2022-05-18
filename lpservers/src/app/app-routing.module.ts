@@ -9,7 +9,7 @@ import { DiagnosticsComponent } from './diagnostics/diagnostics.component';
 const routes: Routes = [
   { path: 'principal', component: PrincipalComponent},
   { path: 'pacients', component: PacientsComponent},
-  { path: 'diagnostics', component: DiagnosticsComponent},
+  { path: 'diagnostics/:idpacient', component: DiagnosticsComponent},
   { path: 'historial/:idpacient', component: HistorialComponent},
   { path: '**', redirectTo:'/principal'},
  

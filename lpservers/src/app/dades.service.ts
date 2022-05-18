@@ -10,9 +10,9 @@ export class DadesService {
   urlServidor = "https://xtkyneixvg.execute-api.eu-west-1.amazonaws.com"
   constructor(private http: HttpClient) { }
 
-  llegirpacients(idmetge:any){
+  llegirpacients(){
     return this.http.get<any>(
-      this.urlServidor + '/pacients/' + idmetge 
+      this.urlServidor + '/pacients/42'  
     )
     }
 
@@ -21,4 +21,9 @@ export class DadesService {
         this.urlServidor + '/historial/' + idpacient
       )
       }
+      llegirdiagnostic(idpacient:any){
+        return this.http.get<any>(
+          this.urlServidor + '/diagnostics/' + idpacient
+        )
+        }
 }

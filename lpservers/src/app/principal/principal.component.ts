@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DadesService } from '../dades.service';
 
 @Component({
   selector: 'app-principal',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalComponent implements OnInit {
 
-  constructor() { }
+  pacients:any = "";
+  constructor(public route: ActivatedRoute, public serveiDades: DadesService) { }
 
   ngOnInit(): void {
+    this.serveiDades.llegirpacients().subscribe(resultat=>{
+      this.pacients=resultat.Items;
+      
+  })
+
   }
+
 
 }

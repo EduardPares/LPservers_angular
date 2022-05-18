@@ -1,10 +1,22 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="/principal">Hospital Santa Sofía</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/pacients">Pacients</a>
+        <a class="nav-link" href="/diagnostics">Diagnòstics</a>
+      </div>
+    </div>
+  </div>
+</nav>
 <div class="pantalla">
     <div class="historial" >
       Historial del pacient
-      <div class="col" *ngFor="let h of historial" >
-     {{h.dolencies}}
+      <div class="col" *ngFor="let h of historial">
+     {{h.pulmonia.deteccio}}
+      </div>
     </div>
     </div>
