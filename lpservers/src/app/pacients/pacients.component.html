@@ -1,25 +1,34 @@
 <div class="pantalla">
     <div class="pacients" >
-      Pacients
+      Llistat de pacients:
       <br>
       <br>
-      <div class="col" *ngFor="let p of pacients" >
-        Nom Pacient:
-        <!-- <a [routerLink]="['/peliculesdetall/'+p.id]" class="text-dark">{{p.titolpelicula}}</a> -->
-        <a [routerLink]="['/historialpacients/'+p.info.idpacient]">{{p.info.nom}} {{p.info.cognoms}}</a>
-        <br>
-        <!-- <a  class="text-dark"> Director: {{p.director}}</a> -->
-        <!-- <br>
-        <br>
-        <img [src]="p.imatge">
-        <br>
-        <br>
-        <a  class="text-dark"> Valoracio: {{p.valoracio}}</a>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
-        <br>
-        <br>  
-         -->
-       
+      <div class="col" >
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Nom</th>
+              <th scope="col">Cognoms</th>
+              <th scope="col">Data i hora de naixament</th>
+              <th scope="col">Sexe</th>
+              <th scope="col">Adreça</th>
+              <th scope="col">Correu</th>
+              <th scope="col">Telèfon</th>
+            </tr>
+          </thead>
+          <tbody  *ngFor="let p of pacients">
+            <tr>
+              <td [routerLink]="['/historialpacients/'+p.info.idpacient]">{{p.info.nom}}</td>
+              <td>{{p.info.cognoms}}</td>
+              <td>{{p.info.datanaix}}</td>
+              <td>{{p.info.sexe}}</td>
+              <td>{{p.contacte.adreca}}</td>
+              <td>{{p.contacte.correu}}</td>
+              <td>{{p.contacte.telefon}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br>   
     </div>
     </div>
