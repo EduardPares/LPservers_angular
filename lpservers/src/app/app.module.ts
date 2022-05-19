@@ -9,6 +9,7 @@ import { HistorialComponent } from './historial/historial.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { DiagnosticsComponent } from './diagnostics/diagnostics.component';
 import { LoginComponent } from './login/login.component';
+import { EstudisComponent } from './estudis/estudis.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LoginComponent } from './login/login.component';
     HistorialComponent,
     PrincipalComponent,
     DiagnosticsComponent,
-    LoginComponent
+    LoginComponent,
+    EstudisComponent
   ],
   imports: [
     BrowserModule,
