@@ -28,7 +28,7 @@
           </thead>
           <tbody  *ngFor="let p of pacients">
             <tr>
-              <td style="cursor: pointer;" [routerLink]="['/historial/'+p.idpacient]">{{p.info.nom}} {{p.info.cognoms}}</td>
+              <td style="cursor: pointer; color: rgb(100, 100, 207)" [routerLink]="['/historial/'+p.idpacient]"><b>{{p.info.nom}} {{p.info.cognoms}}</b></td>
               <td>{{p.info.datanaix}}</td>
               <td>{{p.info.sexe}}</td>
               <td>{{p.contacte.adreca}}</td>
