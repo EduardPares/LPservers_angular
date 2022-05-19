@@ -22,6 +22,7 @@
         <table class="table">
           <thead>
             <tr>
+              <th scope="col"></th>
               <th scope="col">Malàltia</th>
               <th scope="col">Sintomes</th>
               <th scope="col">Detecció</th>
@@ -30,6 +31,8 @@
           </thead>
           <tbody class=" table-info" >
             <tr *ngFor="let h of historial">
+              <th scope="col"></th>
+
               <td><i>{{h[0]}}</i></td>
               <td>{{h[1].sintomes}}</td>
               <td>{{h[1].deteccio}}</td>

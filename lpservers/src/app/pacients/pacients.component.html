@@ -16,7 +16,7 @@
     <div class="pacients" >
       <div class="col" >
       <br>
-       <h3>Llistat dels pacients:</h3> 
+       <h3 class="ps-2">Llistat dels pacients:</h3> 
       <br>
         <table class="table">
           <thead>
@@ -31,6 +31,7 @@
           </thead>
           <tbody class=" table-info" >
             <tr *ngFor="let p of pacients">
+              
               <td style="cursor: pointer;" [routerLink]="['/historial/'+p.idpacient]"><i>{{p.info.nom}} {{p.info.cognoms}}</i></td>
               <td>{{p.info.datanaix}}</td>
               <td>{{p.info.sexe}}</td>
