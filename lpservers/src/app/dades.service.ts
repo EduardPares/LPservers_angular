@@ -31,4 +31,9 @@ export class DadesService {
             this.urlServidor + '/unpacient/' + idpacientb
           )
           }
+          nompacient(idpacientn:any){
+            return this.http.get<any>(
+              this.urlServidor + '/historial/' + idpacientn
+            )
+            }
 }
