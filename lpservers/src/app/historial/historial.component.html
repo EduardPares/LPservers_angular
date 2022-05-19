@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link" href="/pacients">Pacients</a>
-        <a class="nav-link" href="/diagnostics">Diagnòstics</a>
+        <a class="nav-link" [routerLink]="['/diagnostics/'+pacients]">Diagnòstics</a>
       </div>
     </div>
   </div>
@@ -16,7 +16,11 @@
     <div class="historial" >
       Historial del pacient
       <div class="col" *ngFor="let h of historial">
-     {{h.pulmonia.deteccio}}
+     {{h[0]}}
+     {{h[1].sintomes}}
+     {{h[1].deteccio}}
+     {{h[1].tractament}}  
+     
       </div>
     </div>
     </div>

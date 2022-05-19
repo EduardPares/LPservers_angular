@@ -9,8 +9,9 @@ import { DadesService } from '../dades.service';
 })
 export class HistorialComponent implements OnInit {
 
-  historial:any = "";
+  historial:any="";
   idpacient:any = "";
+  pacients:any="";
   constructor(public route: ActivatedRoute, public serveiDades: DadesService) { }
 
 
@@ -20,7 +21,10 @@ export class HistorialComponent implements OnInit {
     this.serveiDades.llegirhistorial(this.idpacient).subscribe(resultat=>{
       this.historial=resultat;
   })
+  this.serveiDades.llegirpacients().subscribe(resultat=>{
+    this.pacients=resultat.Items;
+
+  })
 
 }
-
 }
