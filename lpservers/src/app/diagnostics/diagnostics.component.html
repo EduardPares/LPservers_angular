@@ -48,8 +48,8 @@
           <th scope="col">Recepta</th>
         </tr>
       </thead>
-      <tbody class=" table-info" *ngFor="let d of diagnostic">
-        <tr>
+      <tbody class=" table-info" >
+        <tr *ngFor="let d of diagnostic">
           <td>{{d.detalls.data}}</td> 
           <td>{{d.detalls.descripcio}}</td>
           <td>{{d.detalls.recepta}}</td>

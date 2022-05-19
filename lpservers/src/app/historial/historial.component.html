@@ -26,8 +26,8 @@
               <th scope="col">Tractament</th>
             </tr>
           </thead>
-          <tbody class=" table-info" *ngFor="let h of historial">
-            <tr>
+          <tbody class=" table-info" >
+            <tr *ngFor="let h of historial">
               <td><i>{{h[0]}}</i></td>
               <td>{{h[1].sintomes}}</td>
               <td>{{h[1].deteccio}}</td>
