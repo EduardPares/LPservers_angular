@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HistorialComponent } from './historial/historial.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { DiagnosticsComponent } from './diagnostics/diagnostics.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DiagnosticsComponent } from './diagnostics/diagnostics.component';
     PacientsComponent,
     HistorialComponent,
     PrincipalComponent,
-    DiagnosticsComponent
+    DiagnosticsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
