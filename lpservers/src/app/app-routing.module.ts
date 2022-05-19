@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'pacients', component: PacientsComponent},
   { path: 'diagnostics/:idpacient', component: DiagnosticsComponent},
   { path: 'historial/:idpacient', component: HistorialComponent},
-  { path: '**', redirectTo:'/principal'},
+  { path: '**', redirectTo:'/login'},
  
 ];
 

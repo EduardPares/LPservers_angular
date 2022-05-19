@@ -25,7 +25,7 @@
   <div class="col-6">
     <form>
       <div class="mb-3 py" >
-        <label for="diagnostic" class="form-label">Insereix el diagnòstic</label>
+        <label for="diagnostic" class="form-label" *ngFor = "let b of boto">Insereix el diagnòstic de {{b.info.nom}} {{b.info.cognoms}}: </label>
         <input type="text" class="form-control" id="diagnostic">
        
       </div>
@@ -33,7 +33,7 @@
     </form>
   </div>
   <div class="col-6">
-    Llistat dels diagnòstics:
+    <label for="diagnostic" class="form-label"  *ngFor = "let b of boto" >Llistat dels diagnòstics de {{b.info.nom}} {{b.info.cognoms}}: </label> 
     <table class="table">
       <thead>
         <tr>
@@ -42,7 +42,7 @@
           <th scope="col">Recepta</th>
         </tr>
       </thead>
-      <tbody *ngFor="let d of diagnostic">
+      <tbody class=" table-info" *ngFor="let d of diagnostic">
         <tr>
           <td>{{d.detalls.data}}</td> 
           <td>{{d.detalls.descripcio}}</td>

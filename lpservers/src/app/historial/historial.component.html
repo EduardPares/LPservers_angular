@@ -15,7 +15,7 @@
   <div class="pantalla">
     <div class="pacients" >
       <div class="col" >
-        <label for="diagnostic" class="form-label"  *ngFor = "let n of nom" > Historial de <i>{{n.info.nom}} {{n.info.cognoms}}</i>: </label>
+        <label for="historial" class="form-label"  *ngFor = "let n of nom" > Historial de <i>{{n.info.nom}} {{n.info.cognoms}}</i>: </label>
         <table class="table">
           <thead>
             <tr>
@@ -25,9 +25,9 @@
               <th scope="col">Tractament</th>
             </tr>
           </thead>
-          <tbody  *ngFor="let h of historial">
+          <tbody class=" table-info" *ngFor="let h of historial">
             <tr>
-              <td>{{h[0]}}</td>
+              <td><i>{{h[0]}}</i></td>
               <td>{{h[1].sintomes}}</td>
               <td>{{h[1].deteccio}}</td>
               <td>{{h[1].tractament}}</td>
