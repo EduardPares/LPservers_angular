@@ -11,6 +11,8 @@ export class DiagnosticsComponent implements OnInit {
   pacients:any=""
   diagnostic:any=""
   idpacient:any=""
+  idpacientb:any=""
+  boto:any=""
 
   constructor(public route: ActivatedRoute, public serveiDades: DadesService) { }
 
@@ -24,12 +26,22 @@ export class DiagnosticsComponent implements OnInit {
         this.serveiDades.llegirdiagnostic(this.idpacient).subscribe(resultat=>{
           this.diagnostic=resultat.Items;
       }
-    )
-     
-      
+    )   
   })
+
+  this.route.params.subscribe(
+    params => {
+      this.idpacientb = this.route.snapshot.paramMap.get("idpacient");
+        this.serveiDades.botopacient(this.idpacientb).subscribe(resultat=>{
+          this.boto=resultat.Items;
+}) 
+    }
+ 
+  )}
+
+ 
+
+
+ 
 }
 
-
-
-}

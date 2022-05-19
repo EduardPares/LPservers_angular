@@ -26,4 +26,9 @@ export class DadesService {
           this.urlServidor + '/diagnostics/' + idpacient
         )
         }
+        botopacient(idpacientb:any){
+          return this.http.get<any>(
+            this.urlServidor + '/unpacient/' + idpacientb
+          )
+          }
 }
