@@ -10,30 +10,35 @@ export class DadesService {
   urlServidor = "https://xtkyneixvg.execute-api.eu-west-1.amazonaws.com"
   constructor(private http: HttpClient) { }
 
-  llegirpacients(){
+  llegirpacients() {
     return this.http.get<any>(
-      this.urlServidor + '/pacients/42'  
+      this.urlServidor + '/pacients/42'
     )
-    }
+  }
 
-    llegirhistorial(idpacient:any){
-      return this.http.get<any>(
-        this.urlServidor + '/historial/' + idpacient
-      )
-      }
-      llegirdiagnostic(idpacient:any){
-        return this.http.get<any>(
-          this.urlServidor + '/diagnostics/' + idpacient
-        )
-        }
-        botopacient(idpacientb:any){
-          return this.http.get<any>(
-            this.urlServidor + '/unpacient/' + idpacientb
-          )
-          }
-          nompacient(idpacientn:any){
-            return this.http.get<any>(
-              this.urlServidor + '/historial/' + idpacientn
-            )
-            }
+  llegirhistorial(idpacient: any) {
+    return this.http.get<any>(
+      this.urlServidor + '/historial/' + idpacient
+    )
+  }
+  llegirdiagnostic(idpacient: any) {
+    return this.http.get<any>(
+      this.urlServidor + '/diagnostics/' + idpacient
+    )
+  }
+  botopacient(idpacientb: any) {
+    return this.http.get<any>(
+      this.urlServidor + '/unpacient/' + idpacientb
+    )
+  }
+  nompacient(idpacientn: any) {
+    return this.http.get<any>(
+      this.urlServidor + '/historial/' + idpacientn
+    )
+  }
+  inserir(descripcio: any, idpacient: any) {
+    const body = { data: "", descripcio: "Hola", recepta: "", dolencia: "", idmetgeD: "" };
+    this.http.put<any>(this.urlServidor + '/diagnostics/' + idpacient, body)
+
+  }
 }

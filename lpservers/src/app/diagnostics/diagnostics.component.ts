@@ -13,6 +13,7 @@ export class DiagnosticsComponent implements OnInit {
   idpacient:any=""
   idpacientb:any=""
   boto:any=""
+  descripcio:any=""
 
   constructor(public route: ActivatedRoute, public serveiDades: DadesService) { }
 
@@ -36,8 +37,13 @@ export class DiagnosticsComponent implements OnInit {
           this.boto=resultat.Items;
 }) 
     }
+
  
   )}
+  inserirdades(){
+    this.serveiDades.inserir("",this.idpacient)
+  }
+  
 
  
 

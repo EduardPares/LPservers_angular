@@ -10,6 +10,7 @@ import { PrincipalComponent } from './principal/principal.component';
 import { DiagnosticsComponent } from './diagnostics/diagnostics.component';
 import { LoginComponent } from './login/login.component';
 import { EstudisComponent } from './estudis/estudis.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EstudisComponent } from './estudis/estudis.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

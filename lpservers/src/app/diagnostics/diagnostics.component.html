@@ -27,14 +27,15 @@
       <div class="mb-3 py" >
         <h4><label for="diagnostic" class="form-label" *ngFor = "let b of boto">Insereix el diagnòstic de <i>{{b.info.nom}} {{b.info.cognoms}}</i>:</label></h4>
         <br>
-       Data: z
+       Data: <input type="text" class="form-control" id="data">
+
         <br>
        Descripció: <input type="text" class="form-control" id="descripcio">
         <br>
        Recepta: <input type="text" class="form-control" id="recepta">
        
       </div>
-      <button type="button" class=  "btn btn-primary">Inserir</button>
+      <button type="button" class=  "btn btn-primary" (click)="inserirdades">Inserir</button>
     </form>
   </div>
   <div class="col-6">
