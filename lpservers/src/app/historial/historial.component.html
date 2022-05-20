@@ -7,7 +7,6 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link" href="/pacients">Pacients</a>
-        <a class="nav-link" [routerLink]="['/diagnostics/'+pacients]">Diagnòstics</a>
         <a class="nav-link" href="/login">Sortir</a> 
       </div>
     </div>
@@ -17,7 +16,7 @@
     <div class="pacients" >
       <div class="col" >
         <br>
-        <h3><label for="historial" class="form-label"  *ngFor = "let n of nom" > Historial de <i>{{n.info.nom}} {{n.info.cognoms}}</i>: </label></h3>
+        <h4><label for="historial" class="form-label"  *ngFor = "let n of nom" > Historial de <i>{{n.info.nom}} {{n.info.cognoms}}</i>: </label></h4>
         <br>
         <table class="table">
           <thead>
