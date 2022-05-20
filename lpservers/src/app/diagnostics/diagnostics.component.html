@@ -40,15 +40,16 @@
   </div>
   <div class="col-6">
     <h4><label for="diagnostic" class="form-label"  *ngFor = "let b of boto" >Llistat dels diagnòstics de <i>{{b.info.nom}} {{b.info.cognoms}}</i>: </label></h4> 
-    <table class="table">
-      <thead>
+    <div class="card mx-3">
+    <table class="table table-borderless">
+      <thead class=" table-primary " >
         <tr>
           <th scope="col">Data</th>
           <th scope="col">Descripció</th>
           <th scope="col">Recepta</th>
         </tr>
       </thead>
-      <tbody class=" table-info" >
+      <tbody class="">
         <tr *ngFor="let d of diagnostic">
           <td>{{d.detalls.data}}</td> 
           <td>{{d.detalls.descripcio}}</td>
@@ -56,5 +57,6 @@
         </tr>
       </tbody>
     </table>
+  </div>
   </div>
 </div>
