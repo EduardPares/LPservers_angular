@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DadesService } from '../dades.service';
 
 @Component({
   selector: 'app-estudis',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./estudis.component.css']
 })
 export class EstudisComponent implements OnInit {
-
-  constructor() { }
+  encriptades:any=""
+  constructor(public route: ActivatedRoute, public serveiDades: DadesService) { }
 
   ngOnInit(): void {
-  }
-
+    this.serveiDades.llegirdades().subscribe(resultat=>{
+      this.encriptades=resultat;
+    })
+}
 }
