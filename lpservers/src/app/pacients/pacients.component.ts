@@ -9,6 +9,7 @@ import { DadesService } from '../dades.service';
 })
 export class PacientsComponent implements OnInit {
   pacients:any = "";
+  cerca:any = "";
   constructor(public route: ActivatedRoute, public serveiDades: DadesService) { }
 
   ngOnInit(): void {

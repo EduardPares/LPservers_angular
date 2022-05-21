@@ -18,8 +18,9 @@
         <br>
         <h4><label for="historial" class="form-label"  *ngFor = "let n of nom" > Historial de <i>{{n.info.nom}} {{n.info.cognoms}}</i>: </label></h4>
         <br>
-        <table class="table">
-          <thead>
+        <div class="card mx-3">
+        <table class="table table-borderless">
+          <thead class="table-primary">
             <tr>
               <th scope="col"></th>
               <th scope="col">Malàltia</th>
@@ -28,7 +29,7 @@
               <th scope="col">Tractament</th>
             </tr>
           </thead>
-          <tbody class=" table-info" >
+          <tbody >
             <tr *ngFor="let h of historial">
               <th scope="col"></th>
 
@@ -39,6 +40,7 @@
             </tr>
           </tbody>
         </table>
+      </div>
       </div>
     </div>
   </div>
