@@ -11,4 +11,28 @@
       </div>
     </div>
   </nav>
-  <label class="form-label"  *ngFor = "let e of encriptades">{{e.data.idpacient}}</label>
+  <div class="card mx-3">
+    <table class="table table-borderless">
+      <thead class="table-primary">
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Pacient</th>
+          <th scope="col">Dolència</th>
+          <th scope="col">Detecció</th>
+          <th scope="col">Sintomes</th>
+          <th scope="col">Tractament</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr *ngFor="let e of encriptades">
+          <th scope="col"></th>
+
+          <td>{{e.idpacient}}</td>
+          <td>{{e.dolencia}}</td>
+          <td>{{e.deteccio}}</td>
+          <td>{{e.sintomes}}</td>
+          <td>{{e.tractament}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

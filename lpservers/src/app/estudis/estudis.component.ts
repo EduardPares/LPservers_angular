@@ -13,7 +13,7 @@ export class EstudisComponent implements OnInit {
 
   ngOnInit(): void {
     this.serveiDades.llegirdades().subscribe(resultat=>{
-      this.encriptades=resultat;
+      this.encriptades=resultat.data;
     })
 }
 }

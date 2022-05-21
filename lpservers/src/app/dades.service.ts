@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 
 export class DadesService {
   urlServidor = "https://xtkyneixvg.execute-api.eu-west-1.amazonaws.com"
-  urlServidorE = "ec2-3-250-125-124.eu-west-1.compute.amazonaws.com"
+  urlServidorE = "http://ec2-3-250-125-124.eu-west-1.compute.amazonaws.com:3000"
   constructor(private http: HttpClient) { }
  
   llegirpacients() {
