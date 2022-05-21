@@ -37,8 +37,7 @@ export class DadesService {
     )
   }
   inserir(descripcio: any, idpacient: any) {
-    const body = { data: "", descripcio: "Hola", recepta: "", dolencia: "", idmetgeD: "" };
-    this.http.put<any>(this.urlServidor + '/diagnostics/' + idpacient, body)
+    this.http.put<any>(this.urlServidor + '/diagnostics/' + idpacient, descripcio)
 
   }
 }
