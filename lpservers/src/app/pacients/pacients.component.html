@@ -65,12 +65,23 @@
 
               <form>
                 <div class="mb-3" >
-                 Data: <input type="text" class="form-control" id="data" placeholder="Escriu la data">
-          
-                  <br>
-                 Descripció: <input type="text" class="form-control" id="descripcio" placeholder="Descripcio...">
-                  <br>
-                 Recepta: <input type="text" class="form-control" id="recepta" placeholder="Recepta...">
+                  Num TSI: <input type="text" class="form-control" id="data" placeholder="AAAA 0 000000 00 0">
+                  <div class="mt-3">
+                 Data: <input type="text" class="form-control" id="data" placeholder="00/00/00 00:00:00">
+                  </div>
+                 <div class="row my-3">
+                    <div class="col-lg-6">
+                      
+                 Descripció:
+                 <textarea class="form-control" aria-label="With textarea" id="descripcio"placeholder="Descripcio..."></textarea>
+
+                    </div>
+                    <div class="col-lg-6">
+                      Recepta:                  <textarea class="form-control" aria-label="With textarea" id="recepta" placeholder="Recepta..."></textarea>
+
+                 
+                    </div>
+                  </div>
                  
                 </div>
                 <div class="float-right">
@@ -102,24 +113,26 @@
         <thead class="table-primary">
           <tr>
             <th scope="col">Nom i cognoms</th>
+            <th scope="col">TSI</th>
             <th scope="col">Data i hora de naixament</th>
             <th scope="col">Sexe</th>
             <th scope="col">Adreça</th>
             <th scope="col">Correu</th>
             <th scope="col">Telèfon</th>
-            <th scope="col">Diagnòstics</th>
+            <th scope="col">Historial</th>
           </tr>
         </thead>
         <tbody >
           <tr *ngFor="let p of pacients">
             
-            <td style="cursor: pointer;" [routerLink]="['/historial/'+p.idpacient]"><i>{{p.info.nom}} {{p.info.cognoms}}</i></td>
+            <td style="cursor: pointer;" [routerLink]="['/diagnostics/'+p.idpacient]"><i>{{p.info.nom}} {{p.info.cognoms}}</i></td>
+            <td>{{p.idpacient}}</td>
             <td>{{p.info.datanaix}}</td>
             <td>{{p.info.sexe}}</td>
             <td>{{p.contacte.adreca}}</td>
             <td>{{p.contacte.correu}}</td>
             <td>{{p.contacte.telefon}}</td>
-            <td><a style="color: green;" [routerLink]="['/diagnostics/'+p.idpacient]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
+            <td><a style="color: green;" [routerLink]="['/historial/'+p.idpacient]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
               <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1h-4z"/>
             </svg></a></td>
           </tr>
