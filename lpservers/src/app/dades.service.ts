@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class DadesService {
   urlServidor = "https://xtkyneixvg.execute-api.eu-west-1.amazonaws.com"
   constructor(private http: HttpClient) { }
-
+  // ec2-3-250-125-124.eu-west-1.compute.amazonaws.com
   llegirpacients() {
     return this.http.get<any>(
       this.urlServidor + '/pacients/42'
