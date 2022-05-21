@@ -9,11 +9,17 @@ import { DadesService } from '../dades.service';
 })
 export class EstudisComponent implements OnInit {
   encriptades:any=""
+  idpacientE:any=""
+  pacientE:any=""
   constructor(public route: ActivatedRoute, public serveiDades: DadesService) { }
 
   ngOnInit(): void {
     this.serveiDades.llegirdades().subscribe(resultat=>{
       this.encriptades=resultat.data;
     })
+    this.serveiDades.llegirpacientE(this.idpacientE).subscribe(resultat=>{
+      this.pacientE=resultat.data;
+})
 }
 }
+

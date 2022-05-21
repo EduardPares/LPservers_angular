@@ -46,4 +46,9 @@ export class DadesService {
       this.urlServidorE + '/historial' 
     )
   }
+  llegirpacientE(idpacientE: any) {
+    return this.http.get<any>(
+      this.urlServidorE + '/pacients/' + idpacientE 
+    )
+  }
 }
