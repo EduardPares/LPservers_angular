@@ -13,33 +13,70 @@
     </div>
   </div>
 </nav>
-<div class="btn-group px-5 py-5">
+<!-- <div class="btn-group px-5 py-5">
   <a  [routerLink]="['/pacients']"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="blue" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
     <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
   </svg></a>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" *ngFor="let p of pacients" [routerLink]="['/diagnostics/'+p.idpacient]" >{{p.info.nom}} {{p.info.cognoms}}</a></li>
   </ul>
-</div>
+</div> -->
 <div class="row px-5 py-5">
   <div class="col-6">
-    <form>
-      <div class="mb-3 py" >
-        <h4><label for="diagnostic" class="form-label" *ngFor = "let b of boto">Insereix el diagnòstic de <i>{{b.info.nom}} {{b.info.cognoms}}</i>:</label></h4>
-        <br>
-       Data: <input type="text" class="form-control" id="data" placeholder="Escriu la data">
+    
 
-        <br>
-       Descripció: <input type="text" class="form-control" id="descripcio" placeholder="Descripcio...">
-        <br>
-       Recepta: <input type="text" class="form-control" id="recepta" placeholder="Recepta...">
-       
-      </div>
-      <button type="button" class=  "btn btn-primary" (click)="inserirdades">Inserir</button>
-    </form>
+    <div class="card">
+      <!-- <img src="../images/slider2.png" class="card-img-top" alt="..."> -->
+      
+      
+      <table class="table table-borderless">
+        <thead class="table-primary">
+          <tr>
+            <th *ngFor = "let b of boto" scope="col" class="d-flex"><svg class="me-2" style="padding-top: 2px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 256 256" xml:space="preserve">
+              <defs>
+              </defs>
+              <g transform="translate(128 128) scale(0.72 0.72)" >
+                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(-175.05 -175.05) scale(3.89 3.89)" >
+                <path d="M 45 90 c -6.075 0 -11 -4.925 -11 -11 V 11 c 0 -6.075 4.925 -11 11 -11 s 11 4.925 11 11 v 68 C 56 85.075 51.075 90 45 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(43,214,59); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                <path d="M 79 56 H 11 C 4.925 56 0 51.075 0 45 s 4.925 -11 11 -11 h 68 c 6.075 0 11 4.925 11 11 S 85.075 56 79 56 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(43,214,59); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              </g>
+              </g>
+              </svg> Inserir diagnòstic de {{b.info.nom}} {{b.info.cognoms}}:
+              <br></th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr >
+            
+            <td >
+
+              <form>
+                <div class="mb-4" >
+                  <div class="row mb-3">
+                    <div class="col-lg-6">Num TSI: <input *ngFor = "let b of boto" type="text"  disabled class="form-control" id="data" placeholder="{{b.idpacient}}">
+                      </div>
+                    <div class="col-lg-6">Data: <input type="text" class="form-control" id="data" placeholder="00/00/00"></div>
+                  </div>
+                  
+                 Descripció: <input type="text" class="form-control" id="descripcio" placeholder="Descripcio...">
+                  <br>
+                 Recepta: <input type="text" class="form-control" id="recepta" placeholder="Recepta...">
+                 
+                </div>
+                <button style = "border-color: rgb(43,214,59);background-color:rgb(43,214,59)"  type="button" class=  "btn btn-primary" (click)="inserirdades">Inserir</button>
+              
+              </form>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    
+    
+    </div>
   </div>
   <div class="col-6">
-    <h4><label for="diagnostic" class="form-label"  *ngFor = "let b of boto" >Llistat dels diagnòstics de <i>{{b.info.nom}} {{b.info.cognoms}}</i>: </label></h4> 
+    <!-- <h4><label for="diagnostic" class="form-label"  *ngFor = "let b of boto" >Llistat dels diagnòstics de <i>{{b.info.nom}} {{b.info.cognoms}}</i>: </label></h4>  -->
     <div class="card mx-3">
     <table class="table table-borderless">
       <thead class=" table-primary " >
