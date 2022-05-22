@@ -41,7 +41,18 @@ export class DiagnosticsComponent implements OnInit {
  
   )}
   inserirdades(){
-    this.serveiDades.inserir("",this.idpacient)
+    console.log("inserint")
+    this.serveiDades.inserir({
+      "detalls": {
+       "data": "12/1/2001",
+       "descripcio": "...",
+       "recepta": "..."
+      },
+      "dolencia": "hola2",
+      "idmetgeD": "1ii3iv"
+     },this.idpacient).subscribe(resultat=>{
+      alert("Inserit correctament");
+}) 
   }
   
 

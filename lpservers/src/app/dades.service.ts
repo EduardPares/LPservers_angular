@@ -38,7 +38,7 @@ export class DadesService {
     )
   }
   inserir(descripcio: any, idpacient: any) {
-    this.http.put<any>(this.urlServidor + '/diagnostics/' + idpacient, descripcio)
+    return this.http.put<any>(this.urlServidor + '/diagnostics/' + idpacient, descripcio)
 
   }
   llegirdades() {
