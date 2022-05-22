@@ -11,19 +11,15 @@
     </div>
   </div>
 </nav>
-<div class="btn-group px-5 py-5">
-  <a  [routerLink]="['/pacients']"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#2BD63B" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
-    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+<br>
+  <a class="ps-3 pe-2" [routerLink]="['/pacients']"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-caret-left-square-fill" viewBox="0 0 16 16">
+    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm10.5 10V4a.5.5 0 0 0-.832-.374l-4.5 4a.5.5 0 0 0 0 .748l4.5 4A.5.5 0 0 0 10.5 12z"/>
   </svg></a>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" *ngFor="let p of pacients" [routerLink]="['/diagnostics/'+p.idpacient]" >{{p.info.nom}} {{p.info.cognoms}}</a></li>
-  </ul>
-</div>
-  <div class="pantalla">
-    <div class="pacients" >
-      <div class="col" >
+  
+  <!-- <b *ngFor = "let b of boto">{{b.info.nom}} {{b.info.cognoms}}</b> -->
+
         <br>
-        <h4><label for="historial" class="form-label"  *ngFor = "let n of nom" > Historial de <i>{{n.info.nom}} {{n.info.cognoms}}</i>: </label></h4>
+        <!-- <h4><label for="historial" class="form-label"  *ngFor = "let n of nom" > Historial de <i>{{n.info.nom}} {{n.info.cognoms}}</i>: </label></h4> -->
         <br>
         <div class="card mx-3">
         <table class="table table-borderless">
@@ -48,9 +44,7 @@
           </tbody>
         </table>
       </div>
-      </div>
-    </div>
-  </div>
+
 
 
      

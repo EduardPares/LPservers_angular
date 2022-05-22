@@ -12,17 +12,15 @@
     </div>
   </div>
 </nav>
-<div class="btn-group px-5 py-5">
-  <a  [routerLink]="['/pacients']"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#2BD63B" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
-    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+<br>
+  <a class="ps-3 pe-2" [routerLink]="['/pacients']"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-caret-left-square-fill" viewBox="0 0 16 16">
+    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm10.5 10V4a.5.5 0 0 0-.832-.374l-4.5 4a.5.5 0 0 0 0 .748l4.5 4A.5.5 0 0 0 10.5 12z"/>
   </svg></a>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" *ngFor="let p of pacients" [routerLink]="['/diagnostics/'+p.idpacient]" >{{p.info.nom}} {{p.info.cognoms}}</a></li>
-  </ul>
-</div> 
-<div class="row px-5 py-5">
+  
+  <b *ngFor = "let b of boto">{{b.info.nom}} {{b.info.cognoms}}</b>
+  
+<div class="row px-3 pt-3">
   <div class="col-6">
-    
 
     <div class="card">
       <!-- <img src="../images/slider2.png" class="card-img-top" alt="..."> -->
@@ -31,7 +29,8 @@
       <table class="table table-borderless">
         <thead class="table-primary">
           <tr>
-            <th *ngFor = "let b of boto" scope="col" class="d-flex"><svg class="me-2" style="padding-top: 2px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 256 256" xml:space="preserve">
+            <th *ngFor = "let b of boto" scope="col" class="d-flex">
+              <svg class="me-2" style="padding-top: 2px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 256 256" xml:space="preserve">
               <defs>
               </defs>
               <g transform="translate(128 128) scale(0.72 0.72)" >
@@ -73,28 +72,31 @@
     
     
     </div>
+   
+
   </div>
   <div class="col-6">
     <!-- <h4><label for="diagnostic" class="form-label"  *ngFor = "let b of boto" >Llistat dels diagnòstics de <i>{{b.info.nom}} {{b.info.cognoms}}</i>: </label></h4>  -->
-    <div class="card mx-3">
-    <table class="table table-borderless">
-      <thead class=" table-primary " >
-        <tr>
-          <th scope="col">Data</th>
-          <th scope="col">Descripció</th>
-          <th scope="col">Recepta</th>
-          <th scope="col">Conclusió</th>
-        </tr>
-      </thead>
-      <tbody class="">
-        <tr *ngFor="let d of diagnostic">
-          <td>{{d.detalls.data}}</td> 
-          <td>{{d.detalls.descripcio}}</td>
-          <td>{{d.detalls.recepta}}</td>
-          <td>{{d.dolencia}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    
+    <div class="card">
+      <table class="table table-borderless">
+        <thead class=" table-primary " >
+          <tr>
+            <th scope="col">Data</th>
+            <th scope="col">Descripció</th>
+            <th scope="col">Recepta</th>
+            <th scope="col">Conclusió</th>
+          </tr>
+        </thead>
+        <tbody class="">
+          <tr *ngFor="let d of diagnostic">
+            <td>{{d.detalls.data}}</td> 
+            <td>{{d.detalls.descripcio}}</td>
+            <td>{{d.detalls.recepta}}</td>
+            <td>{{d.dolencia}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
