@@ -106,11 +106,11 @@
     <h4 class="p-0">Llistat dels pacients:</h4> </div>
   <div class="col-lg-6 float-right"> 
     
-    <div style=" width: 300px;" class="input-group">
+    <div style=" width: 35%; right: -65%;margin-left: 10px;" class="input-group">
       <input [(ngModel)]='cerca' type="text"  class="form-control" placeholder="AAAA 0 000000 00 0" aria-label="Recipient's username" aria-describedby="basic-addon2">
-      <div class="input-group-append">
-        <button class="btn btn-secondary ms-1" type="button" [routerLink]="['/historial/'+cerca]">Cerca</button>
-      </div>
+      
+        <button class="btn btn-secondary" type="button" [routerLink]="['/historial/'+cerca]">Cerca</button>
+  
     </div>
     </div>
 </div>
