@@ -1,17 +1,24 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/principal">Hospital Santa Sofía</a>
+    <a class="navbar-brand" href="/pacients">Hospital Santa Sofía</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link" href="/pacients">Pacients</a>
         <a class="nav-link" href="/login">Sortir</a> 
       </div>
     </div>
   </div>
 </nav>
+<div class="btn-group px-5 py-5">
+  <a  [routerLink]="['/pacients']"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#2BD63B" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+  </svg></a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" *ngFor="let p of pacients" [routerLink]="['/diagnostics/'+p.idpacient]" >{{p.info.nom}} {{p.info.cognoms}}</a></li>
+  </ul>
+</div>
   <div class="pantalla">
     <div class="pacients" >
       <div class="col" >

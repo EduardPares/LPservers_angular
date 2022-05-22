@@ -10,9 +10,9 @@ import { EstudisComponent } from './estudis/estudis.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
+  { path: 'pacients', component: PacientsComponent},
   { path: 'principal', component: PrincipalComponent},
   { path: 'estudis', component: EstudisComponent},
-  { path: 'pacients', component: PacientsComponent},
   { path: 'diagnostics/:idpacient', component: DiagnosticsComponent},
   { path: 'historial/:idpacient', component: HistorialComponent},
   { path: '**', redirectTo:'/login'},
