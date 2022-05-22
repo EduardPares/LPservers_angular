@@ -14,6 +14,8 @@ export class HistorialComponent implements OnInit {
   pacients:any="";
   idpacientn:any="";
   nom:any="";
+  boto:any=""
+  idpacientb:any=""
   constructor(public route: ActivatedRoute, public serveiDades: DadesService) { }
 
 
@@ -27,6 +29,16 @@ export class HistorialComponent implements OnInit {
     this.pacients=resultat.Items;
 
   })
+  this.route.params.subscribe(
+    params => {
+      this.idpacientb = this.route.snapshot.paramMap.get("idpacient");
+        this.serveiDades.botopacient(this.idpacientb).subscribe(resultat=>{
+          this.boto=resultat.Items;
+}) 
+    }
+
+ 
+  )
   this.idpacientn = this.route.snapshot.paramMap.get("idpacient");
   this.serveiDades.botopacient(this.idpacientn).subscribe(resultat=>{
     this.nom=resultat.Items;
