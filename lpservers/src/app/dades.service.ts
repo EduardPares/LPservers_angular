@@ -51,4 +51,4 @@ export class DadesService {
       this.urlServidorE + '/pacients/' + idpacientE 
     )
   }
-}
+} 

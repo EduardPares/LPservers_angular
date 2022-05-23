@@ -53,15 +53,26 @@
                   <div class="row mb-3">
                     <div class="col-lg-6">Num TSI: <input *ngFor = "let b of boto" type="text"  disabled class="form-control" id="data" placeholder="{{b.idpacient}}">
                       </div>
-                    <div class="col-lg-6">Data: <input type="text" class="form-control" id="data" placeholder="DD/MM/YYYY"></div>
+                    <div class="col-lg-6">Data: <input [(ngModel)]='data' type="text" class="form-control" id="data" placeholder="DD/MM/YYYY"></div>
                   </div>
-                  
-                 Descripció: <input type="text" class="form-control" id="descripcio" placeholder="Descripcio...">
-                  <br>
-                 Recepta: <input type="text" class="form-control" id="recepta" placeholder="Recepta...">
+                  Conclusió: <input [(ngModel)]='conclusio' type="text" class="form-control" id="data" placeholder="...">
+                  <div class="row my-3">
+                    <div class="col-lg-6">
+                      
+                 Descripció:
+                 <textarea [(ngModel)]='descripcio' class="form-control" aria-label="With textarea" id="descripcio"placeholder="Descripció..."></textarea>
+
+                    </div>
+                    <div class="col-lg-6">
+                      Recepta:                  <textarea [(ngModel)]='recepta' class="form-control" aria-label="With textarea" id="recepta" placeholder="Recepta..."></textarea>
+
                  
+                    </div>
+                  </div>
+                 
+                
                 </div>
-                <button style = "border-color: rgb(43,214,59);background-color:rgb(43,214,59)"  type="button" class=  "btn btn-primary" (click)="inserirdades()">Inserir</button>
+                <button style = "border-color: rgb(43,214,59);background-color:rgb(43,214,59)"  type="button" class=  "btn btn-primary" (click)="inserirdades(conclusio)">Inserir</button>
               
               </form>
 

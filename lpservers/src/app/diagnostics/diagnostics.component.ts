@@ -13,7 +13,12 @@ export class DiagnosticsComponent implements OnInit {
   idpacient:any=""
   idpacientb:any=""
   boto:any=""
+  body:any=""
+
+  data:any=""
   descripcio:any=""
+  recepta:any=""
+  conclusio:any=""
 
   constructor(public route: ActivatedRoute, public serveiDades: DadesService) { }
 
@@ -40,17 +45,9 @@ export class DiagnosticsComponent implements OnInit {
 
  
   )}
-  inserirdades(){
+  inserirdades(conclusio:any){
     console.log("inserint")
-    this.serveiDades.inserir({
-      "detalls": {
-       "data": "12/1/2001",
-       "descripcio": "...",
-       "recepta": "..."
-      },
-      "dolencia": "hola2",
-      "idmetgeD": "1ii3iv"
-     },this.idpacient).subscribe(resultat=>{
+    this.serveiDades.inserir('{ "detalls": {"data": "'+this.data+'", "descripcio": "'+this.descripcio+'", "recepta": "'+this.recepta+'" }, "dolencia": "'+this.conclusio+'", "idmetgeD": "1ii3iv" }', this.idpacient).subscribe(resultat=>{
       alert("Inserit correctament");
 }) 
   }
