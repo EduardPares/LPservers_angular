@@ -45,10 +45,10 @@ export class DiagnosticsComponent implements OnInit {
 
  
   )}
-  inserirdades(conclusio:any){
-    console.log("inserint")
-    this.serveiDades.inserir('{ "detalls": {"data": "'+this.data+'", "descripcio": "'+this.descripcio+'", "recepta": "'+this.recepta+'" }, "dolencia": "'+this.conclusio+'", "idmetgeD": "1ii3iv" }', this.idpacient).subscribe(resultat=>{
-      alert("Inserit correctament");
+  inserirdades(){
+    this.serveiDades.inserir('{ "detalls": {"data": "'+this.data+'", "descripcio": "'+this.descripcio+'", "recepta": "'+this.recepta+'" }, "dolencia": "'+this.conclusio+'", "idmetgeD": "1ii3iv" }', this.idpacient)
+    .subscribe(resultat=>{
+      this.ngOnInit()
 }) 
   }
   
