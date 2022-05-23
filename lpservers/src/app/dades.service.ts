@@ -41,6 +41,10 @@ export class DadesService {
     return this.http.put<any>(this.urlServidor + '/diagnostics/' + idpacient, descripcio)
 
   }
+  inserirextern(descripcio: any, id: any) {
+    return this.http.put<any>(this.urlServidor + '/diagnostics/' + id, descripcio)
+
+  }
   llegirdades() {
     return this.http.get<any>(
       this.urlServidorE + '/historial' 

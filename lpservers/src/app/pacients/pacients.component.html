@@ -123,21 +123,22 @@
             
             <td >
 
-              <form>
                 <div class="mb-3" >
-                  Num TSI: <input type="text" class="form-control" id="data" placeholder="AAAA0000000000">
+                  Num TSI: <input type="text" [(ngModel)]='id' class="form-control" id="data" placeholder="AAAA0000000000">
                   <div class="mt-3">
-                 Data: <input type="text" class="form-control" id="data" placeholder="DD/MM/YYYY">
+                 Data: <input type="text" [(ngModel)]='data' class="form-control" id="data" placeholder="DD/MM/YYYY">
                   </div>
                  <div class="row my-3">
                     <div class="col-lg-6">
-                      
+
+                Conclusió: <input [(ngModel)]='conclusio' type="text" class="form-control" id="data" placeholder="Conclusió...">
+
                  Descripció:
-                 <textarea style="height: 116px;" class="form-control" aria-label="With textarea" id="descripcio"placeholder="Descripció..."></textarea>
+                 <textarea style="height: 116px;" [(ngModel)]='descripcio' class="form-control" aria-label="With textarea" id="descripcio"placeholder="Descripció..."></textarea>
 
                     </div>
                     <div class="col-lg-6">
-                      Recepta:                  <textarea style="height: 116px;" class="form-control" aria-label="With textarea" id="recepta" placeholder="Recepta..."></textarea>
+                      Recepta:                  <textarea style="height: 116px;" [(ngModel)]='recepta' class="form-control" aria-label="With textarea" id="recepta" placeholder="Recepta..."></textarea>
 
                  
                     </div>
@@ -145,11 +146,10 @@
                  
                 </div>
                 <div class="float-right">
-                  <button style = "border-color: rgb(43,214,59);background-color:rgb(43,214,59)" type="button" class="btn btn-success float-right" >Inserir</button>
+                  <button style = "border-color: rgb(43,214,59);background-color:rgb(43,214,59)" type="button" class="btn btn-success float-right" (click)="inserirdades()">Inserir</button>
 
                 </div>
-              </form>
-
+          
             </td>
           </tr>
         </tbody>

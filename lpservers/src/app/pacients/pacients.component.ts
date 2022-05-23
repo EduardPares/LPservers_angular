@@ -10,6 +10,11 @@ import { DadesService } from '../dades.service';
 export class PacientsComponent implements OnInit {
   pacients:any = "";
   cerca:any = "";
+  data:any = "";
+  descripcio:any="";
+  recepta:any="";
+  conclusio:any="";
+  id:any="";
   constructor(public route: ActivatedRoute, public serveiDades: DadesService) { }
 
   ngOnInit(): void {
@@ -19,5 +24,13 @@ export class PacientsComponent implements OnInit {
   })
 
   }
-
+  inserirdades(){
+    this.serveiDades.inserir('{ "detalls": {"data": "'+this.data+'", "descripcio": "'+this.descripcio+'", "recepta": "'+this.recepta+'" }, "dolencia": "'+this.conclusio+'", "idmetgeD": "1ii3iv" }', this.id)
+    .subscribe(resultat=>{
+      alert("Inserit Correctament");
+      this.ngOnInit()
+      
+}) 
+  }
+  
 }
