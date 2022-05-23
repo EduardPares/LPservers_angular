@@ -12,11 +12,27 @@
   </div>
 </nav>
 <br>
+<div class="row d-flex mx-1 mb-4">
+  <div class="col-6">
   <a class="ps-3 pe-2" [routerLink]="['/diagnostics/'+idpacient]" ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-caret-left-square-fill" viewBox="0 0 16 16">
     <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm10.5 10V4a.5.5 0 0 0-.832-.374l-4.5 4a.5.5 0 0 0 0 .748l4.5 4A.5.5 0 0 0 10.5 12z"/>
   </svg></a>
   
   Historial de <b *ngFor = "let b of boto"> {{b.info.nom}} {{b.info.cognoms}}</b>
+
+</div>
+<div style="text-align: end;"class="col-6">
+  
+  Pacients
+
+  <a class="ps-1" [routerLink]="['/pacients']"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-caret-right-square-fill" viewBox="0 0 16 16">
+    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z"/>
+  </svg></a>
+
+</div>
+</div>
+
+
 
         <br>
         <!-- <h4><label for="historial" class="form-label"  *ngFor = "let n of nom" > Historial de <i>{{n.info.nom}} {{n.info.cognoms}}</i>: </label></h4> -->
