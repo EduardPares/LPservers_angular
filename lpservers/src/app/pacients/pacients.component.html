@@ -21,13 +21,74 @@
       <table class="table table-borderless">
         <thead class="table-primary">
           <tr>
-            <th scope="col">Diagnostic pacient extern</th>
+            <th scope="col" class="d-flex"><svg class="me-2" style="padding-top: 2px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 256 256" xml:space="preserve">
+              <defs>
+              </defs>
+              <g transform="translate(128 128) scale(0.72 0.72)" >
+                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(-175.05 -175.05) scale(3.89 3.89)" >
+                <path d="M 45 90 c -6.075 0 -11 -4.925 -11 -11 V 11 c 0 -6.075 4.925 -11 11 -11 s 11 4.925 11 11 v 68 C 56 85.075 51.075 90 45 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(43,214,59); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                <path d="M 79 56 H 11 C 4.925 56 0 51.075 0 45 s 4.925 -11 11 -11 h 68 c 6.075 0 11 4.925 11 11 S 85.075 56 79 56 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(43,214,59); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              </g>
+              </g>
+              </svg> Afegir un nou pacient a la base de dades de l'hospital</th>
           </tr>
         </thead>
         <tbody >
           <tr >
             
-            <td ></td>
+            <td >
+
+              <form>
+                <div class="mb-3" >
+                  <div class="row  mb-3">
+                    <div class="col-lg-6">
+                      Nom: <input type="text" class="form-control" id="data" placeholder="...">
+                    </div>
+                    <div class="col-lg-6">
+                      Cognoms: <input type="text" class="form-control" id="data" placeholder="...">
+                    </div>
+                  </div>
+                  <div class="row  mb-3">
+                    <div class="col-lg-6">
+                      Num TSI: <input type="text" class="form-control" id="data" placeholder="AAAA0000000000">
+                    </div>
+                    <div class="col-lg-6">
+                      Data de naixament: <input type="text" class="form-control" id="data" placeholder="DD/MM/YYYY HH:MM:SS">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-lg-2">
+                      Sexe:
+                      <select class="form-select" aria-label="Default select example">
+                        <option value="1">H</option>
+                        <option value="2">D</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-6">
+                      Adreça: <input type="text" class="form-control" id="data" placeholder="C/ ... n0">
+                    </div>
+                    <div class="col-lg-4">
+                      Municipi <input type="text" class="form-control" id="data" placeholder="...">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      Correu: <input type="text" class="form-control" id="data" placeholder="...@...com">
+                    </div>
+                    <div class="col-lg-6">
+                      telefon: <input type="text" class="form-control" id="data" placeholder="...">
+                    </div>
+                  </div>
+                </div>
+                 
+                
+                <div class="float-right">
+                  <button style = "border-color: rgb(43,214,59);background-color:rgb(43,214,59)" type="button" class="btn btn-success float-right" >Inserir</button>
+
+                </div>
+              </form>
+
+            </td>
           </tr>
         </tbody>
       </table>
@@ -126,6 +187,7 @@
             <th scope="col">Data i hora de naixament</th>
             <th scope="col">Sexe</th>
             <th scope="col">Adreça</th>
+            <th scope="col">Municipi</th>
             <th scope="col">Correu</th>
             <th scope="col">Telèfon</th>
             <th scope="col">Historial</th>
@@ -139,6 +201,7 @@
             <td>{{p.info.datanaix}}</td>
             <td>{{p.info.sexe}}</td>
             <td>{{p.contacte.adreca}}</td>
+            <td>{{p.contacte.municipi}}</td>
             <td>{{p.contacte.correu}}</td>
             <td>{{p.contacte.telefon}}</td>
             <td><a style="color: green;" [routerLink]="['/historial/'+p.idpacient]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
