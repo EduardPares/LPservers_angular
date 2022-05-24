@@ -48,19 +48,21 @@ export class DiagnosticsComponent implements OnInit {
  
   )}
   inserirdades(){
-    console.log("inserir")
-    this.serveiDades.inserir('{ "detalls": {"data": "'+this.data+'", "descripcio": "'+this.descripcio+'", "recepta": "'+this.recepta+'" }, "dolencia": "'+this.conclusio+'", "idmetgeD": "1ii3iv" }', this.idpacient)
-    .subscribe(resultat=>{
-      alert("Diagnostic del pacient "+this.idpacient+" inserit correctament")
-      if(this.inserirH){
-        this.serveiDades.inserirHistorial('{"dolencia": "'+this.conclusio+'", "deteccio": "'+this.data+'", "idmetgeD": "42", "sintomes": [ "'+this.descripcio+'" ], "tractament": "'+this.recepta+'" }', this.idpacient)
-        .subscribe(resultat=>{
-        alert("Inserit correctament a historial")
+    if(this.data && this.descripcio && this.recepta && this.conclusio && this.idpacient){
+      console.log("inserir")
+      this.serveiDades.inserir('{ "detalls": {"data": "'+this.data+'", "descripcio": "'+this.descripcio+'", "recepta": "'+this.recepta+'" }, "dolencia": "'+this.conclusio+'", "idmetgeD": "1ii3iv" }', this.idpacient)
+      .subscribe(resultat=>{
+        alert("Diagnostic del pacient "+this.idpacient+" inserit correctament")
+        if(this.inserirH){
+          this.serveiDades.inserirHistorial('{"dolencia": "'+this.conclusio+'", "deteccio": "'+this.data+'", "idmetgeD": "42", "sintomes": [ "'+this.descripcio+'" ], "tractament": "'+this.recepta+'" }', this.idpacient)
+          .subscribe(resultat=>{
+          alert("Inserit correctament a historial")
+          this.ngOnInit()
+        }) 
+        }
         this.ngOnInit()
-      }) 
-      }
-      this.ngOnInit()
-}) 
+  }) 
+    }
   }
   
 
