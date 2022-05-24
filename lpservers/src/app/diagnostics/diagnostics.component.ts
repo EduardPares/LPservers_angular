@@ -51,12 +51,11 @@ export class DiagnosticsComponent implements OnInit {
     console.log("inserir")
     this.serveiDades.inserir('{ "detalls": {"data": "'+this.data+'", "descripcio": "'+this.descripcio+'", "recepta": "'+this.recepta+'" }, "dolencia": "'+this.conclusio+'", "idmetgeD": "1ii3iv" }', this.idpacient)
     .subscribe(resultat=>{
-      alert("inerit correctament")
+      alert("Diagnostic del pacient "+this.idpacient+" inserit correctament")
       if(this.inserirH){
-        alert("ha entrat")
         this.serveiDades.inserirHistorial('{"dolencia": "'+this.conclusio+'", "deteccio": "'+this.data+'", "idmetgeD": "42", "sintomes": [ "'+this.descripcio+'" ], "tractament": "'+this.recepta+'" }', this.idpacient)
         .subscribe(resultat=>{
-        alert("inerit correctament a historial")
+        alert("Inserit correctament a historial")
         this.ngOnInit()
       }) 
       }

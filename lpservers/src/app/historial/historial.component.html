@@ -37,8 +37,7 @@
 </div>
 
       
-        <div class="row mx-1">
-          <div class="col-lg-8">
+        <div class="mx-3">
             <div class="card">
               <table class="table table-borderless">
                 <thead class="table-primary">
@@ -62,54 +61,6 @@
                 </tbody>
               </table>
             </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card">
-              <table class="table table-borderless">
-                <thead class="table-primary">
-                  <tr>
-                    <th *ngFor = "let b of boto" scope="col" class="d-flex">
-                      <svg class="me-2" style="padding-top: 2px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 256 256" xml:space="preserve">
-                      <defs>
-                      </defs>
-                      <g transform="translate(128 128) scale(0.72 0.72)" >
-                        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(-175.05 -175.05) scale(3.89 3.89)" >
-                        <path d="M 45 90 c -6.075 0 -11 -4.925 -11 -11 V 11 c 0 -6.075 4.925 -11 11 -11 s 11 4.925 11 11 v 68 C 56 85.075 51.075 90 45 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(43,214,59); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 79 56 H 11 C 4.925 56 0 51.075 0 45 s 4.925 -11 11 -11 h 68 c 6.075 0 11 4.925 11 11 S 85.075 56 79 56 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(43,214,59); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                      </g>
-                      </g>
-                      </svg> Inserir a l'historial de {{b.info.nom}} {{b.info.cognoms}}:
-                      <br></th>
-                  </tr>
-                </thead>
-                <tbody >
-                  <tr>
-                    <div class="mx-1">
-                      <div class="mb-2">
-                        Dolència: <input type="text" class="form-control" id="data" placeholder="Dolència...">
-                      </div>
-                      <div class="mb-2">
-                        Detecció: <input type="text" class="form-control" id="data" placeholder="DD/MM/YYYY">
-                      </div>
-                      <div class="mb-2">
-                        Sintomes: 
-                        <textarea class="form-control" aria-label="With textarea" id="descripcio"placeholder="Sintomes..."></textarea>
-                      </div>
-                      <div class="mb-3">
-                        Tractament: 
-                        <textarea class="form-control" aria-label="With textarea" id="descripcio"placeholder="Tractament..."></textarea>
-                      </div>
-                <button style = "border-color: rgb(43,214,59);background-color:rgb(43,214,59)"  type="button" class=  "btn btn-primary">Inserir</button>
-                      
-                     
-                    </div>
-                   
-
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
         </div>
         
       
