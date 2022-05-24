@@ -38,55 +38,55 @@
             
             <td >
 
-              <form>
+              
                 <div class="mb-3" >
                   <div class="row  mb-3">
                     <div class="col-lg-6">
-                      Nom: <input type="text" class="form-control" id="data" placeholder="Nom...">
+                      Nom: <input [(ngModel)]='nomN' type="text" class="form-control" id="data" placeholder="Nom...">
                     </div>
                     <div class="col-lg-6">
-                      Cognoms: <input type="text" class="form-control" id="data" placeholder="Cognoms...">
+                      Cognoms: <input [(ngModel)]='cognomsN' type="text" class="form-control" id="data" placeholder="Cognoms...">
                     </div>
                   </div>
                   <div class="row  mb-3">
                     <div class="col-lg-6">
-                      Num TSI: <input type="text" class="form-control" id="data" placeholder="AAAA0000000000">
+                      Num TSI: <input [(ngModel)]='idN' type="text" class="form-control" id="data" placeholder="AAAA0000000000">
                     </div>
                     <div class="col-lg-6">
-                      Data de naixament: <input type="text" class="form-control" id="data" placeholder="DD/MM/YYYY HH:MM:SS">
+                      Data de naixament: <input [(ngModel)]='datanaixN' type="text" class="form-control" id="data" placeholder="DD/MM/YYYY HH:MM:SS">
                     </div>
                   </div>
-                  <div class="row mb-3">
+                  DNI: <input [(ngModel)]='DNIN' type="text" class="form-control" id="data" placeholder="00000000A">
+                  <div class="row my-3">
                     <div class="col-lg-2">
                       Sexe:
-                      <select class="form-select" aria-label="Default select example">
-                        <option value="1">H</option>
-                        <option value="2">D</option>
+                      <select [(ngModel)]='sexeN' class="form-select" aria-label="Default select example">
+                        <option value="H">H</option>
+                        <option value="D">D</option>
                       </select>
                     </div>
                     <div class="col-lg-6">
-                      Adreça: <input type="text" class="form-control" id="data" placeholder="C/ ... n0">
+                      Adreça: <input [(ngModel)]='adrecaN' type="text" class="form-control" id="data" placeholder="C/ ... n0">
                     </div>
                     <div class="col-lg-4">
-                      Municipi <input type="text" class="form-control" id="data" placeholder="Municipi...">
+                      Municipi <input [(ngModel)]='municipiN' type="text" class="form-control" id="data" placeholder="Municipi...">
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-lg-6">
-                      Correu: <input type="text" class="form-control" id="data" placeholder="exemple@exemple.com">
+                      Correu: <input [(ngModel)]='correuN' type="text" class="form-control" id="data" placeholder="exemple@exemple.com">
                     </div>
                     <div class="col-lg-6">
-                      telefon: <input type="text" class="form-control" id="data" placeholder="000 000 000">
+                      telefon: <input [(ngModel)]='telefonN' type="text" class="form-control" id="data" placeholder="000 000 000">
                     </div>
                   </div>
                 </div>
                  
                 
                 <div class="float-right">
-                  <button style = "border-color: rgb(43,214,59);background-color:rgb(43,214,59)" type="button" class="btn btn-success float-right" >Inserir</button>
+                  <button style = "border-color: rgb(43,214,59);background-color:rgb(43,214,59)" type="button" class="btn btn-success float-right" (click)="inserirdadesN()">Inserir</button>
 
                 </div>
-              </form>
 
             </td>
           </tr>

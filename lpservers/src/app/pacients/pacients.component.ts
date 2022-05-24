@@ -15,6 +15,19 @@ export class PacientsComponent implements OnInit {
   recepta:any="";
   conclusio:any="";
   id:any="";
+
+  adrecaN:any=""
+  correuN:any=""
+  municipiN:any=""
+  telefonN:any=""
+  cognomsN:any=""
+  datanaixN:any=""
+  DNIN:any=""
+  nomN:any=""
+  sexeN:any=""
+  idN:any=""
+
+
   constructor(public route: ActivatedRoute, public serveiDades: DadesService) { }
 
   ngOnInit(): void {
@@ -30,6 +43,29 @@ export class PacientsComponent implements OnInit {
       alert("Inserit Correctament");
       this.ngOnInit()
       
+}) 
+  }
+
+  inserirdadesN(){
+    console.log("insert")
+    // alert('{ "contacte": {"adreca": "'+this.adrecaN+'", "correu": "'+this.correuN+'","municipi": "'+this.municipiN+'", "telefon": "'+this.telefonN+'" }, "idmetge": "42", "info": { "cognoms": "'+this.cognomsN+'", "datanaix": "'+this.datanaixN+'", "DNI": "'+this.DNIN+'", "nom": "'+this.nomN+'", "sexe": "'+this.sexeN+'" } }');
+    this.serveiDades.inserirPacient('{ "contacte": {"adreca": "'+this.adrecaN+'", "correu": "'+this.correuN+'","municipi": "'+this.municipiN+'", "telefon": "'+this.telefonN+'" }, "idmetge": "42", "info": { "cognoms": "'+this.cognomsN+'", "datanaix": "'+this.datanaixN+'", "DNI": "'+this.DNIN+'", "nom": "'+this.nomN+'", "sexe": "'+this.sexeN+'" } }', this.idN)
+    .subscribe(resultat=>{
+      alert("Inserit Correctament");
+      this.ngOnInit()
+      
+    }) 
+    this.serveiDades.inserirPacientH('', this.idN)
+        .subscribe(resultat=>{
+          alert("historial inserit");
+          this.ngOnInit()
+          
+    }) 
+    this.serveiDades.inserirPacientD('', this.idN)
+        .subscribe(resultat=>{
+          alert("diagnostic inserit");
+          this.ngOnInit()
+          
 }) 
   }
   

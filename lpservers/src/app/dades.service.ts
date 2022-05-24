@@ -45,6 +45,18 @@ export class DadesService {
     return this.http.put<any>(this.urlServidor + '/diagnostics/' + id, descripcio)
 
   }
+  inserirPacient(descripcio: any, id: any) {
+    return this.http.post<any>(this.urlServidor + '/pacients/' + id, descripcio)
+
+  }
+  inserirPacientH(descripcio: any, id: any) {
+    return this.http.post<any>(this.urlServidor + '/historial/' + id, descripcio)
+
+  }
+  inserirPacientD(descripcio: any, id: any) {
+    return this.http.post<any>(this.urlServidor + '/diagnostics/' + id, descripcio)
+
+  }
   llegirdades() {
     return this.http.get<any>(
       this.urlServidorE + '/historial' 
