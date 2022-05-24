@@ -17,16 +17,19 @@ export class DadesService {
   llegirpacients() {
     this.token = localStorage.getItem("token")
     this.metge = jwt_decode(this.token)
-    console.log(this.token["cognito:username"])
+    console.log(this.metge["cognito:username"])
     const headers = { 'Authorization': `Bearer ${this.token}` }
     return this.http.get<any>(
-      this.urlServidor + '/pacients/42', {headers}
+      this.urlServidor + '/pacients/'+ this.metge["cognito:username"], {headers}
     )
   }
 
   llegirhistorial(idpacient: any) {
+    this.token = localStorage.getItem("token")
+    
+    const headers = { 'Authorization': `Bearer ${this.token}` }
     return this.http.get<any>(
-      this.urlServidor + '/historial/' + idpacient
+      this.urlServidor + '/historial/' + idpacient, {headers}
     )
   }
   llegirdiagnostic(idpacient: any) {
@@ -38,46 +41,76 @@ export class DadesService {
     )
   }
   botopacient(idpacientb: any) {
+    this.token = localStorage.getItem("token")
+    
+    const headers = { 'Authorization': `Bearer ${this.token}` }
     return this.http.get<any>(
-      this.urlServidor + '/unpacient/' + idpacientb
+      this.urlServidor + '/unpacient/' + idpacientb, {headers}
     )
   }
   nompacient(idpacientn: any) {
+    this.token = localStorage.getItem("token")
+    
+    const headers = { 'Authorization': `Bearer ${this.token}` }
     return this.http.get<any>(
-      this.urlServidor + '/historial/' + idpacientn
+      this.urlServidor + '/historial/' + idpacientn, {headers}
     )
   }
   inserir(descripcio: any, idpacient: any) {
-    return this.http.put<any>(this.urlServidor + '/diagnostics/' + idpacient, descripcio)
+    this.token = localStorage.getItem("token")
+    
+    const headers = { 'Authorization': `Bearer ${this.token}` }
+    return this.http.put<any>(this.urlServidor + '/diagnostics/' + idpacient, descripcio, {headers})
 
   }
   inserirextern(descripcio: any, id: any) {
-    return this.http.put<any>(this.urlServidor + '/diagnostics/' + id, descripcio)
+    this.token = localStorage.getItem("token")
+    
+    const headers = { 'Authorization': `Bearer ${this.token}` }
+    return this.http.put<any>(this.urlServidor + '/diagnostics/' + id, descripcio, {headers})
 
   }
   inserirPacient(descripcio: any, id: any) {
-    return this.http.post<any>(this.urlServidor + '/pacients/' + id, descripcio)
+    this.token = localStorage.getItem("token")
+    
+    const headers = { 'Authorization': `Bearer ${this.token}` }
+    return this.http.post<any>(this.urlServidor + '/pacients/' + id, descripcio,  {headers})
 
   }
   inserirPacientH(descripcio: any, id: any) {
-    return this.http.post<any>(this.urlServidor + '/historial/' + id, descripcio)
+    this.token = localStorage.getItem("token")
+    
+    const headers = { 'Authorization': `Bearer ${this.token}` }
+    return this.http.post<any>(this.urlServidor + '/historial/' + id, descripcio,  {headers})
 
   }
   inserirPacientD(descripcio: any, id: any) {
-    return this.http.post<any>(this.urlServidor + '/diagnostics/' + id, descripcio)
+    this.token = localStorage.getItem("token")
+    
+    const headers = { 'Authorization': `Bearer ${this.token}` }
+    return this.http.post<any>(this.urlServidor + '/diagnostics/' + id, descripcio,  {headers})
 
   }
   inserirHistorial(descripcio: any, id: any) {
-    return this.http.put<any>(this.urlServidor + '/historial/' + id, descripcio)
+    this.token = localStorage.getItem("token")
+    
+    const headers = { 'Authorization': `Bearer ${this.token}` }
+    return this.http.put<any>(this.urlServidor + '/historial/' + id, descripcio,  {headers})
   }
   llegirdades() {
+    this.token = localStorage.getItem("token")
+    
+    const headers = { 'Authorization': `Bearer ${this.token}` }
     return this.http.get<any>(
-      this.urlServidorE + '/historial' 
+      this.urlServidorE + '/historial',  {headers}
     )
   }
   llegirpacientE(idpacientE: any) {
+    this.token = localStorage.getItem("token")
+    
+    const headers = { 'Authorization': `Bearer ${this.token}` }
     return this.http.get<any>(
-      this.urlServidorE + '/pacients/' + idpacientE 
+      this.urlServidorE + '/pacients/' + idpacientE,  {headers} 
     )
   }
 } 
