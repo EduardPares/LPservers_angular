@@ -15,12 +15,6 @@ export class LoginComponent implements OnInit {
     // this.servei.token = this.route.snapshot.paramMap.get("token");
     // console.log(this.servei.token)
     localStorage.clear()
-    localStorage.setItem("token", (window.location.href).split('=')[1].split('&')[0]) 
-
-    if(!localStorage.getItem("token")){
-      alert("no estas loguejat!")
-    }
-    
     
   }
 

@@ -31,6 +31,9 @@ export class PacientsComponent implements OnInit {
   constructor(public route: ActivatedRoute, public serveiDades: DadesService) { }
 
   ngOnInit(): void {
+
+    localStorage.setItem("token", (window.location.href).split('=')[1].split('&')[0])  
+
     this.serveiDades.llegirpacients().subscribe(resultat=>{
       this.pacients=resultat.Items;
       

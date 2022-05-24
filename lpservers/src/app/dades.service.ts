@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import jwt_decode from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 
 export class DadesService {
   token:any=""
+  metge:any=""
   
   urlServidor = "https://xtkyneixvg.execute-api.eu-west-1.amazonaws.com"
   urlServidorE = "http://ec2-3-250-125-124.eu-west-1.compute.amazonaws.com:3000"
@@ -14,6 +16,8 @@ export class DadesService {
  
   llegirpacients() {
     this.token = localStorage.getItem("token")
+    this.metge = jwt_decode(this.token)
+    console.log(this.token["cognito:username"])
     const headers = { 'Authorization': `Bearer ${this.token}` }
     return this.http.get<any>(
       this.urlServidor + '/pacients/42', {headers}
