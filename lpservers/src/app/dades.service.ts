@@ -57,6 +57,9 @@ export class DadesService {
     return this.http.post<any>(this.urlServidor + '/diagnostics/' + id, descripcio)
 
   }
+  inserirHistorial(descripcio: any, id: any) {
+    return this.http.put<any>(this.urlServidor + '/historial/' + id, descripcio)
+  }
   llegirdades() {
     return this.http.get<any>(
       this.urlServidorE + '/historial' 

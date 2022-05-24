@@ -28,7 +28,7 @@
   </div>
   <div style="text-align: end;"class="col-6">
     
-    Historial de <b *ngFor = "let b of boto">{{b.info.nom}} {{b.info.cognoms}}</b>
+    Historial
   
     <a class="ps-1" [routerLink]="['/historial/'+idpacient]"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-caret-right-square-fill" viewBox="0 0 16 16">
       <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z"/>
@@ -92,7 +92,17 @@
                  
                 
                 </div>
-                <button style = "border-color: rgb(43,214,59);background-color:rgb(43,214,59)"  type="button" class=  "btn btn-primary" (click)="inserirdades()">Inserir</button>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <button style = "border-color: rgb(43,214,59);background-color:rgb(43,214,59)"  type="button" class=  "btn btn-primary" (click)="inserirdades()">Inserir</button>
+                  </div>
+                  <div class="col-lg-6 float-right">
+                    <div class="form-check form-switch float-right mt-3">
+                      <input [(ngModel)]='inserirH' class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" >
+                      Inserir a l'historial
+                    </div>
+                  </div>
+                </div>
               
               <!-- </form> -->
 
