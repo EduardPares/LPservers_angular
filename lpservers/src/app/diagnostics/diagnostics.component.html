@@ -70,7 +70,8 @@
               <!-- <form> -->
                 <div class="mb-4" >
                   <div class="row mb-3">
-                    <div class="col-lg-6">Num TSI: <input *ngFor = "let b of boto" type="text"  disabled class="form-control" id="data" placeholder="{{b.idpacient}}">
+                    <div class="col-lg-6">
+                      Num TSI: <input *ngFor = "let b of boto" type="text"  disabled class="form-control" id="data" placeholder="{{b.idpacient}}">
                       </div>
                     <div class="col-lg-6">Data: <input [(ngModel)]='data' type="text" class="form-control" id="data" placeholder="DD/MM/YYYY"></div>
                   </div>
